@@ -9,3 +9,17 @@ var triangle = function(sideA, sideB, sideC) {
     return "scalene";
   }
 };
+
+$(document).ready(function() {
+  $("form#triangle").submit(function(event) {
+    var sideA = parseInt($("input#sideA").val());
+    var sideB = parseInt($("input#sideB").val());
+    var sideC = parseInt($("input#sideC").val());
+    var result = triangle(sideA, sideB, sideC);
+
+    $(".triangle").text(result);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
