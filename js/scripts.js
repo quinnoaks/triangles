@@ -3,7 +3,7 @@ var triangle = function(sideA, sideB, sideC) {
     return "not a triangle";
   } else if ((sideA === sideB) && (sideA === sideC)) {
     return "equilateral";
-  } else {
-    return "isoceles";
+  } else if ((sideA === sideB) || (sideA === sideC) || (sideB === sideC)) {
+    return "isosceles";
   }
 };
