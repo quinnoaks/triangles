@@ -10,4 +10,8 @@ describe('triangle', function() {
   it("is an isosceles triangle when two sides are equal", function() {
     expect(triangle(2,2,3)).to.equal("isosceles");
   });
+
+  it("is a scalene triangle when none of the sides are equal", function() {
+    expect(triangle(2,3,4)).to.equal("scalene");
+  });
 });
